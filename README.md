@@ -1,10 +1,11 @@
 # Ex02 Django ORM Web Application 
-
+## Date:15-03-24
 ## AIM
 To develop a Django application to store and retrieve data from a Book database using Object Relational Mapping(ORM).
 
 ## Entity Relationship Diagram
-![2](https://github.com/Dhanusha17/ORM/assets/151549957/c7bd985e-bd5c-4c58-a3d5-48f7eb770f83)
+
+<img width="451" alt="er diagram booklist ss" src="https://github.com/Dhanusha17/ORM/assets/151549957/b36e7d99-7306-4caa-94ed-8b67850bb3a2">
 
 
 
@@ -23,27 +24,24 @@ create admin.py and write program for admin and models
 
 ## PROGRAM
 ```
+models.py
+class Book(models.Model):
+  Book_id=models.IntegerField(primary_key=True);
+  Book_author=models.CharField(max_length=20);
+  Book_name=models.CharField(max_length=50);
+  publication=models.DateField();
+  price=models.IntegerField();
+class BookAdmin(admin.ModelAdmin):
+  list_display=("Book_id","Book_author","Book_name","publication","price");
+
 admin.py
 from django.contrib import admin
-from .models import student,studentAdmin
-admin.site.register(student,studentAdmin)
-
-models.py
-from django.db import models
-from django.contrib import admin
-class student (models.Model):
-    name=models.CharField(max_length=20,help_text="student")
-    rollno=models.IntegerField()
-    refno=models.IntegerField()
-    age=models.IntegerField()
-    email=models.EmailField()
-class studentAdmin(admin.ModelAdmin):
-    list_display=('name','rollno','refno','age','email')
+from .models import Book,BookAdmin
+admin.site.register(Book,BookAdmin)
 
 ```
 ## OUTPUT
-
-![Screenshot 2024-03-11 225138](https://github.com/Dhanusha17/ORM/assets/151549957/bce2abe6-5297-4bc1-b6e8-5ce71562a1a4)
+<img width="958" alt="booklist ss" src="https://github.com/Dhanusha17/ORM/assets/151549957/63bd0ecb-a623-4a05-9694-bc60d74bdfef">
 
 
 
