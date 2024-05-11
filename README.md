@@ -4,6 +4,7 @@
 To develop a Django application to store and retrieve data from a Book database using Object Relational Mapping(ORM).
 ## Entity Relationship Diagram
 <img width="451" alt="er diagram booklist ss" src="https://github.com/Dhanusha17/ORM/assets/151549957/b36e7d99-7306-4caa-94ed-8b67850bb3a2">
+
 ## DESIGN STEPS
 ### STEP 1:
 clone the respository from github
