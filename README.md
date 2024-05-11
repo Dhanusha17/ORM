@@ -7,8 +7,6 @@ To develop a Django application to store and retrieve data from a Book database 
 
 <img width="451" alt="er diagram booklist ss" src="https://github.com/Dhanusha17/ORM/assets/151549957/b36e7d99-7306-4caa-94ed-8b67850bb3a2">
 
-
-
 ## DESIGN STEPS
 
 ### STEP 1:
@@ -38,7 +36,6 @@ admin.py
 from django.contrib import admin
 from .models import Book,BookAdmin
 admin.site.register(Book,BookAdmin)
-
 ```
 ## OUTPUT
 <img width="958" alt="booklist ss" src="https://github.com/Dhanusha17/ORM/assets/151549957/63bd0ecb-a623-4a05-9694-bc60d74bdfef">
